@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html xmlns:faces="jakarta.faces" xmlns:ui="jakarta.faces.facelets" xmlns:f="jakarta.faces.core"
+  xmlns:h="jakarta.faces.html" xmlns:c="jakarta.tags.core" xmlns:fn="jakarta.tags.functions" xmlns:p="http://primefaces.org/ui">
+
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica;
+            -webkit-font-smoothing: antialiased;
+            background: #f6f8fa; /* Changement de la couleur de fond */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .logo-container img {
+                height: 70px; 
+                width: 70px; 
+                margin-right: 10px; 
+                margin-top: 2px; 
+               }
+        .Usersection-container { 
+                background-color: #fff; 
+                border: 1px solid #d1d5da; 
+                border-radius: 5px; 
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+                padding: 20px; 
+                text-align: center; 
+                width: 300px; 
+                margin-left: 20px; 
+                } 
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            padding: 30px 0;
+        }
+
+        /* Table Styles */
+
+        .table-wrapper {
+            margin: 10px 70px 70px;
+            box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+            background-color: white; /* Changement de la couleur du conteneur du tableau */
+        }
+
+        .fl-table {
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: normal;
+            border: none;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            white-space: nowrap;
+            background-color: white;
+        }
+
+        .fl-table td, .fl-table th {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .fl-table td {
+            border-right: 1px solid #f8f8f8;
+            font-size: 12px;
+        }
+
+        .fl-table thead th {
+            color: #ffffff;
+            background: #4FC3A1;
+        }
+
+        .fl-table thead th:nth-child(odd) {
+            color: #ffffff;
+            background: #324960;
+        }
+
+        .fl-table tr:nth-child(even) {
+            background: #F8F8F8;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 767px) {
+            .fl-table {
+                display: block;
+                width: 100%;
+            }
+
+            .table-wrapper:before {
+                content: "Scroll horizontally >";
+                display: block;
+                text-align: right;
+                font-size: 11px;
+                color: white;
+                padding: 0 0 10px;
+            }
+
+            .fl-table thead, .fl-table tbody, .fl-table thead th {
+                display: block;
+            }
+
+            .fl-table thead th:last-child {
+                border-bottom: none;
+            }
+
+            .fl-table thead {
+                float: left;
+            }
+
+            .fl-table tbody {
+                width: auto;
+                position: relative;
+                overflow-x: auto;
+            }
+
+            .fl-table td, .fl-table th {
+                padding: 20px .625em .625em .625em;
+                height: 60px;
+                vertical-align: middle;
+                box-sizing: border-box;
+                overflow-x: hidden;
+                overflow-y: auto;
+                width: 120px;
+                font-size: 13px;
+                text-overflow: ellipsis;
+            }
+
+            .fl-table thead th {
+                text-align: left;
+                border-bottom: 1px solid #f7f7f9;
+            }
+
+            .fl-table tbody tr {
+                display: table-cell;
+            }
+
+            .fl-table tbody tr:nth-child(odd) {
+                background: none;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: transparent;
+            }
+
+            .fl-table tr td:nth-child(odd) {
+                background: #F8F8F8;
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tr td:nth-child(even) {
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tbody td {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+<body>
+    <h:form>
+    <div class="Usersection-container">
+	 <div class="logo-container">
+        <div style="text-align: center;">
+            <img src="https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg" alt="Smart Home Logo" width="150" height="150" style="margin-bottom: 20px;"/>
+</div>
+            <h2 style="color: Black;">Your Smart Home User Overview</h2>
+        </div>
+
+        <div class="table-wrapper">
+            <p:dataTable var="user" value="#{signupBean.nonAdminUsers}" emptyMessage="No non-admin users found"
+                styleClass="fl-table">
+
+                <p:column headerText="Username">
+                    <h:outputText value="#{user.nomUtilisateur}" styleClass="columnStyle" />
+                </p:column>
+
+                <p:column headerText="Email">
+                    <h:outputText value="#{user.adresseEmail}" styleClass="columnStyle" />
+                </p:column>
+                <!-- Ajoutez plus de colonnes au besoin -->
+
+            </p:dataTable>
+        </div>
+          </div>
+    </h:form>
+
+</body>
+</head>
+
+</html>
+<!DOCTYPE html>
+<html xmlns:faces="jakarta.faces" xmlns:ui="jakarta.faces.facelets" xmlns:f="jakarta.faces.core"
+  xmlns:h="jakarta.faces.html" xmlns:c="jakarta.tags.core" xmlns:fn="jakarta.tags.functions" xmlns:p="http://primefaces.org/ui">
+
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica;
+            -webkit-font-smoothing: antialiased;
+            background: #f6f8fa; /* Changement de la couleur de fond */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .logo-container img {
+                height: 70px; 
+                width: 70px; 
+                margin-right: 10px; 
+                margin-top: 2px; 
+               }
+        .Usersection-container { 
+                background-color: #fff; 
+                border: 1px solid #d1d5da; 
+                border-radius: 5px; 
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+                padding: 20px; 
+                text-align: center; 
+                width: 300px; 
+                margin-left: 20px; 
+                } 
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            padding: 30px 0;
+        }
+
+        /* Table Styles */
+
+        .table-wrapper {
+            margin: 10px 70px 70px;
+            box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+            background-color: white; /* Changement de la couleur du conteneur du tableau */
+        }
+
+        .fl-table {
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: normal;
+            border: none;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            white-space: nowrap;
+            background-color: white;
+        }
+
+        .fl-table td, .fl-table th {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .fl-table td {
+            border-right: 1px solid #f8f8f8;
+            font-size: 12px;
+        }
+
+        .fl-table thead th {
+            color: #ffffff;
+            background: #4FC3A1;
+        }
+
+        .fl-table thead th:nth-child(odd) {
+            color: #ffffff;
+            background: #324960;
+        }
+
+        .fl-table tr:nth-child(even) {
+            background: #F8F8F8;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 767px) {
+            .fl-table {
+                display: block;
+                width: 100%;
+            }
+
+            .table-wrapper:before {
+                content: "Scroll horizontally >";
+                display: block;
+                text-align: right;
+                font-size: 11px;
+                color: white;
+                padding: 0 0 10px;
+            }
+
+            .fl-table thead, .fl-table tbody, .fl-table thead th {
+                display: block;
+            }
+
+            .fl-table thead th:last-child {
+                border-bottom: none;
+            }
+
+            .fl-table thead {
+                float: left;
+            }
+
+            .fl-table tbody {
+                width: auto;
+                position: relative;
+                overflow-x: auto;
+            }
+
+            .fl-table td, .fl-table th {
+                padding: 20px .625em .625em .625em;
+                height: 60px;
+                vertical-align: middle;
+                box-sizing: border-box;
+                overflow-x: hidden;
+                overflow-y: auto;
+                width: 120px;
+                font-size: 13px;
+                text-overflow: ellipsis;
+            }
+
+            .fl-table thead th {
+                text-align: left;
+                border-bottom: 1px solid #f7f7f9;
+            }
+
+            .fl-table tbody tr {
+                display: table-cell;
+            }
+
+            .fl-table tbody tr:nth-child(odd) {
+                background: none;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: transparent;
+            }
+
+            .fl-table tr td:nth-child(odd) {
+                background: #F8F8F8;
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tr td:nth-child(even) {
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tbody td {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+<body>
+    <h:form>
+    <div class="Usersection-container">
+	 <div class="logo-container">
+        <div style="text-align: center;">
+            <img src="https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg" alt="Smart Home Logo" width="150" height="150" style="margin-bottom: 20px;"/>
+</div>
+            <h2 style="color: Black;">Your Smart Home User Overview</h2>
+        </div>
+
+        <div class="table-wrapper">
+            <p:dataTable var="user" value="#{signupBean.nonAdminUsers}" emptyMessage="No non-admin users found"
+                styleClass="fl-table">
+
+                <p:column headerText="Username">
+                    <h:outputText value="#{user.nomUtilisateur}" styleClass="columnStyle" />
+                </p:column>
+
+                <p:column headerText="Email">
+                    <h:outputText value="#{user.adresseEmail}" styleClass="columnStyle" />
+                </p:column>
+                <!-- Ajoutez plus de colonnes au besoin -->
+
+            </p:dataTable>
+        </div>
+          </div>
+    </h:form>
+
+</body>
+</head>
+
+</html>
