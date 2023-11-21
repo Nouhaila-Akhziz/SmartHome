@@ -1,4 +1,6 @@
 
+import java.util.List;
+
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
 
@@ -28,6 +30,11 @@ try {
 	catch (Exception e) {
         throw e;
 	    }
-	}}
+	} public List<Utilisateur> getNonAdminUsers() {
+	    Utilisateurdaoimpl utilisateurdao = new Utilisateurdaoimpl();
+	    return utilisateurdao.findNonAdminUsers();
+	}
+
+	}
 
       

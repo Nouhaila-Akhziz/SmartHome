@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:faces="jakarta.faces" xmlns:ui="jakarta.faces.facelets" xmlns:f="jakarta.faces.core"
-  xmlns:h="jakarta.faces.html" xmlns:c="jakarta.tags.core" xmlns:fn="jakarta.tags.functions">
+  xmlns:h="jakarta.faces.html" xmlns:c="jakarta.tags.core" xmlns:fn="jakarta.tags.functions" xmlns:p="http://primefaces.org/ui">
 
 <head>
     <title>My Page</title>
@@ -139,6 +139,15 @@ input:checked + .slider:before {
             text-shadow: 2px 2px 4px #000000;
             margin-top: 20px;
         }
+        .card {
+            /* Ajoutez les styles de la carte ici */
+            border: 1px;
+            solid : #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+        }
+        
     </style>
 </head>
 
@@ -151,18 +160,18 @@ input:checked + .slider:before {
         </div>
         <nav id="navbar">
             <ul>
-                <li><a href="#welcome-section">Smart Devices</a></li>
-                <li><a href="#about-us-section">Users</a></li>
-                <li><a href="#contact-section">Temperature</a></li>
-                <li><a href="#services-section">Consumation</a></li>
-                <li><a href="#login-section">History</a></li>
+                <li><a href="#Smart Devices-section">Smart Devices</a></li>
+                <li><a href="#Users-section">Users</a></li>
+                <li><a href="#Temperature-section">Temperature</a></li>
+                <li><a href="#Consummation-section">Consummation</a></li>
+                <li><a href="#History-section">History</a></li>
             </ul>
         </nav>
     </div>
     <!-- ... (navbar code) ... -->
 
     <!-- Welcome Section -->
-   <section id="welcome-section" class="custom-section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;
+   <section id="Smart Devices-section" class="custom-section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;
             width: 100%;">
     <h1 class="header" style="font-size: 50px; font-weight: bold; margin-bottom: 20px;">Smart Home</h1>
     <p class="sub-header">Welcome #{signupBean.utilisateur.nomUtilisateur}</p>
@@ -197,25 +206,42 @@ input:checked + .slider:before {
 
     <!-- Other Sections -->
     <!-- Section 2 -->
-    <section class="custom-section" style=" height: 100vh;
-            width: 100% ;">
-        <!-- Content of the second section -->
-    </section>
+   <!-- Section 2 -->
+<!--<section id="Users-section" class="custom-section" style="height: 100vh; width: 100%;">
+    <h1 class="header">Users</h1>
+
+   <h:form>
+        <div class="card">
+            <p:dataTable var="user" value="#{signupBean.nonAdminUsers}" emptyMessage="No non-admin users found">
+                <p:column headerText="Username">
+                    <h:outputText value="#{user.nomUtilisateur}" />
+                </p:column>
+
+                <p:column headerText="Email">
+                    <h:outputText value="#{user.adresseEmail}" />
+                </p:column>
+                <!-- Ajoutez plus de colonnes au besoin -->
+
+              <!-- </p:dataTable>-->
+          <!-- </div>
+    </h:form>
+</section>
+
 
     <!-- Section 3 -->
-    <section class="custom-section" style=" height: 100vh;
+    <section id="Temperature-section" class="custom-section" style=" height: 100vh;
             width: 100% ;">
         <!-- Content of the third section -->
     </section>
 
     <!-- Section 4 -->
-    <section class="custom-section" style=" height: 100vh;
+    <section id="Consummation-section" class="custom-section" style=" height: 100vh;
             width: 100% ;">
         <!-- Content of the fourth section -->
     </section>
 
     <!-- Section 5 -->
-    <section class="custom-section" style=" height: 100vh;
+    <section id="History-section" class="custom-section" style=" height: 100vh;
             width: 100% ;">
         <!-- Content of the fifth section -->
     </section>

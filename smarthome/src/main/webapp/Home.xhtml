@@ -15,150 +15,26 @@
     
     <style>
   
-	 /* Navbar container styles */
+	@import url(https://fonts.googleapis.com/css?family=Lato);
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/* Navbar container styles */
+/* Add this style to change the background color of the LinkedIn icon */
+
 #navbar-container {
-    background-color: #5F9EA0 !important; /* Black background color */
+    background-color:#5F9EA0 !important;
     padding: 40px;
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
-    z-index: 100; /* Ensure it's on top of other elements */
+    z-index: 100;
 }
+.about p{text-align: left;}
 
-        #navbar-container #navbar ul {
-    display: flex;
-}
-	
-        /* Navbar styles */
-        #navbar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            padding: 20px;
-        }
-
-        #navbar ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        #navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            margin: 0 10px;
-        }
-
-        /* Logo container styles */
-        .logo-container {
-            display: flex;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 20px;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .logo-container img {
-            height: 30px;
-            width: 30px;
-            margin-right: 10px;
-        }
-
-        /* Section styles */
-        section {
-            padding: 50px;
-            text-align: center;
-            color: white;
-            text-shadow: 2px 2px 4px #000000;
-            width:70%;
-        }
-
-        #welcome-section {
-            background-image: url('https://demo.smartaddons.com/templates/joomla3/sj-smarthome/images/smarthome/slider1.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 80px;
-            border-radius: 30px;
-        }
-       
-        /* Header styles */
-        .header {
-            font-size: 70px;
-            font-weight: bold;
-            margin-bottom: 0;
-            
-            
-        }
-
-        /* Sub-header styles */
-        .sub-header {
-            font-size: 24px;
-            font-family: 'Helvetica', sans-serif;
-            margin-top: 10px;
-        }
-
-        /* Service Section styles */
-        
-        #services-section {
-           background-color: #ccc;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            height: 80vh;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 80px;
-            border-radius: 30px;
-        }
-	
-        .service-box {
-            width: 300px; /* Set width to 300px */
-            height: 225px; /* Set height to 225px */
-            display: inline-block; /* Display boxes inline */
-            margin: 20px;
-            padding: 15px; /* Adjust padding as needed */
-            text-align: center;
-            background-color: #5D8896; /* White background color */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
-            margin-top: 10px;
-        }
-
-        .service-img {
-            height: 80px;
-            width: 80px;
-            margin: 30px;
-        }
-        
-        
-
-        .service-expression {
-            font-weight: bold;
-            margin: 40px; /* Remove margin to align text better */
-        }
-         /* About Us Section styles */
-    
    .row {
             margin: 0 8px;
-             margin-left: 280px;
+             margin-left: 140px;
         }
 
         .column {
@@ -177,7 +53,7 @@
         }
 
         .container {
-            padding: 10px 16px;
+            padding: 22px 18px;
         }
 
         .container::after,
@@ -200,9 +76,132 @@
             border-radius: 50%;
             object-fit: cover;
         }
-    
-/*NEW CSS*/
-/* About Us Section styles */
+
+
+        
+
+/* Navbar styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 20px;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 10px;
+}
+
+/* Logo container styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-container img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* Section styles */
+section {
+    padding: 50px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Welcome Section styles */
+#welcome-section {
+    background-image: url('https://demo.smartaddons.com/templates/joomla3/sj-smarthome/images/smarthome/slider1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: cover;
+    height: 100vh;
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    border-radius: 30px;
+}
+
+.header {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.sub-header {
+    font-size: 24px;
+    font-family: 'Helvetica', sans-serif;
+    margin-top: 10px;
+}
+
+/* Service Section styles */
+#services-section {
+    background-color: #ccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80vh;
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    border-radius: 30px;
+}
+
+.service-box {
+    width: 300px;
+    height: 225px;
+    display: inline-block;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    background-color: #5D8896;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.service-img {
+    height: 80px;
+    width: 80px;
+    margin: 30px;
+}
+
+.service-expression {
+    font-weight: bold;
+    margin: 40px;
+}
+
 /* About Us Section styles */
 #about-us-section {
     background-color: #CCC;
@@ -211,52 +210,53 @@
     background-attachment: fixed;
     background-position: center;
     height: 80vh;
-    width: 100%;
+    width: 94%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
-    align-items: flex-end; /* Align content to the right */
+    justify-content: flex-start;
+    align-items: flex-end;
     margin-top: 80px;
     border-radius: 30px;
 }
-#contact-section{
-background-color:#282d32;
-background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            backgroud-position: center;
-            height: 70vh;
-            width: 100%;
-            display: flex;
-            
-
+.about-section {
+    background-color: #CCC;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80vh;
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Change this to center */
+    margin-top: 80px;
+    border-radius: 30px;
 }
+
 .about-section h1 {
-    font-size: 70px; /* Change font size to match the header */
+    font-size: 70px;
     font-weight: bold;
-    margin-bottom: 20px;
-    margin-left: 1px;
-    align-self: flex-end; /* Align header to the top right */
-    margin-top: 1px;
+    margin-bottom: 10px;
+    margin-top:0px;
 }
 
 .about-section-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end; /* Align content to the top right */
+    justify-content: center; /* Change this to center */
 }
 
-
-
-.about-section p {
-    font-size: 20px; /* Increase font size for the paragraph */
-    margin-top: 70px;
-    text-align: justify; /* Justify the text */
-    margin-left: 80px; /* Push the paragraph to the right */
+.about-section-row.about-section-col.about-section p {
+    font-size: 55px;
+    margin-top: 60px;
+    text-align: center;
     color: #F5F5F5;
-    font-family: 'Helvetica';
+    font-family: sans-serif; /* Change to a generic font family */
     font-weight: normal;
+    max-width: 800px;
 }
+.about-section-row.about-section-col.about-section.about{margin-right:120px;}
 
 
 .about-section a {
@@ -266,16 +266,17 @@ background-size: cover;
 }
 
 .about {
-    width: 100%;
+    width: 80%;
+    margin-right:120px;
+    margin-left:120px;
+    font-size: 24px;
 }
-
 
 .about-section-col {
     display: flex;
-    justify-content: flex-end; /* Aligner vers la droite */
+    justify-content: center; /* Change this to center */
     align-items: center;
-    
-    width: 50%;
+    width: 100%; /* Change this to 100% */
     box-sizing: border-box;
     padding: 0 10px;
 }
@@ -286,74 +287,85 @@ background-size: cover;
     border-radius: 50%;
     background-color: #ccc;
     object-fit: cover;
-    margin-left: 10px; /* Ajustez la marge comme nécessaire */
-    align-items:aligned;
+    margin-left: 10px;
 }
 
 .about-name, .about-name1 {
     font-size: 18px;
-    color: #333; /* Vous pouvez ajuster la couleur selon vos besoins */
-    font-family: 'Helvetica';
+    color: #333;
 }
 
 
-
-
-
-
-
-
-.services-section .inner-width {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-    margin-left: 1px;
-    background-color: #ccc; /* Set the background color to gray */
+/* Contact Section styles */
+#contact-section {
+    background-color: #282d32;
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 30vh; /* Updated height */
+    width: 100%;
+    display: flex;
     border-radius: 30px;
-    
+    width: 94%;
+    margin-top: 20px;
 }
-/* Footer Styles */
+.footer-dark {
+    hmargin-top: 20px;
+    height: 30vh;
+    margin-bottom: 0; /* Updated to set margin-bottom to 0 */
+}
 
 
 .footer-dark h3 {
-    margin-top: 220px;
-    margin-bottom: 12px;
+    margin-top: 20px;
+margin-bottom: 1px;
     font-weight: bold;
     font-size: 16px;
-    margin-left:520px;
+    margin-left: 320px;
 }
+.section.footer{
+height: 30vh;}
 
 .footer-dark p {
     opacity: 0.6;
     font-size: 14px;
-    margin-left:520px;
+    margin-left: 320px;
+    margin-bottom: 1px;
 }
-
+.footer-dark .site {
+    
+    font-size: 14px;
+    margin-left: 320px;
+    margin-top: 0px;
+}
 .footer-dark ul {
     padding: 0;
     list-style: none;
     line-height: 1.6;
     font-size: 14px;
-    margin-bottom: 0;
-    margin-left:520px;
+    margin-bottom: 0x;
+    margin-left: 320px;
+    display: flex;
+    text-align: center;
 }
 
 .footer-dark ul a {
     color: inherit;
     text-decoration: none;
     opacity: 0.6;
+    padding: 15px;
 }
 
 .footer-dark ul a:hover {
     opacity: 0.8;
 }
+.footer-dark .menu{text-align: center;
+    margin-left: 320px;}
 
 .footer-dark .item.social {
     text-align: center;
-    margin-left:520px;
+    margin-left: 320px;
+    margin-bottom: 0px;
 }
 
 .footer-dark .item.social > a {
@@ -368,41 +380,68 @@ background-size: cover;
     margin: 0 8px;
     color: #fff;
     opacity: 0.75;
-   
 }
+/* Add this style to change the background color of the envelope icon */
+/* Additional style to adjust the color of the envelope icon */
+.footer-dark .item.social a[href*="envelope"] {
+    background-color: red; /* Background color for envelope icon */
+    color: white; /* Text color for envelope icon */
+}
+
+/* Additional style to adjust the color of the envelope icon */
+.footer-dark .item.social a[href*="envelope"] i {
+    color: white; /* Icon color for envelope icon */
+}
+
+/* Additional style to adjust the color of the phone icon */
+.footer-dark .item.social a[href*="phone"] {
+    background-color: blue; /* Background color for phone icon */
+    color: white; /* Text color for phone icon */
+}
+
+/* Additional style to adjust the color of the phone icon */
+.footer-dark .item.social a[href*="phone"] i {
+    color: white; /* Icon color for phone icon */
+}
+
 
 .footer-dark .item.social > a:hover {
     opacity: 0.9;
 }
-
-.footer-dark .copyright {
-    text-align: center;
-    padding-top: 24px;
-    opacity: 0.3;
-    font-size: 13px;
-    margin-bottom: 0;
+.footer-dark .item.social a[href*="linkedin"] {
+    background-color: #0077B5; /* LinkedIn blue color */
 }
 
-.footer-dark .menu {
-    margin-top: 20px; /* Adjust margin as needed */
-    text-align: center;
+/* Additional style to adjust the color of the LinkedIn icon */
+.footer-dark .item.social a[href*="linkedin"] i {
+    color: white;
 }
 
-.footer-dark .menu ul {
+.container-footer.row-footer.copyright{margin-top:10;}
+
+/* Additional styles for circular images */
+.circular-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #ccc;
+    object-fit: cover;
+}
+
+/* Additional styles for contact information */
+.contact-info {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.footer-dark .menu ul li {
-    margin: 0 15px; /* Adjust margin between menu items */
+.contact-info i {
+    margin-right: 5px;
 }
-
-.footer-dark .item.social {
-    text-align: center;
+.copyright {
+margin-bottom: 1px;
 }
-
-    
-        
+	
     </style>
 </head>
 
@@ -419,7 +458,7 @@ background-size: cover;
             <li><a href="#about-us-section">About Us</a></li>
             <li><a href="#contact-section">Contact</a></li>
             <li><a href="#services-section">Services</a></li>
-            <li><a href="#login-section">Login</a></li>
+            <li><a href="Login.xhtml">Login</a></li>
         </ul>
     </nav>
     </div>
@@ -438,7 +477,7 @@ background-size: cover;
       <div class="about-section-row">
         <div class="about-section-col">
           <div class="about">
-            <p>
+            <p >
              
          As engineering students at INPT, we specialize in Embedded Systems and Digital Services, delving into the 
          intricate fusion of hardware and software. Our academic journey is driven by a passion for innovation, where
@@ -451,32 +490,31 @@ background-size: cover;
           </div>
         </div>
         <div class="row">
-        <div class="column">
-            <div class="card">
-                <img src="https://th.bing.com/th/id/OIP.27-tCtXbuqlznsniacbsAgHaDn?pid=ImgDet&amp;rs=1" alt="Amina Ait Lafkih" class="circular-img"/>
-                <div class="container">
-                    <h2>Amina Ait Lafkih</h2>
-                    
-                </div>
+    <div class="column">
+        <div class="card">
+            <img src="https://media.licdn.com/dms/image/D4E03AQEaYf206z36Kw/profile-displayphoto-shrink_800_800/0/1675700165088?e=1706140800&amp;v=beta&amp;t=Q3cBddJhPJnHngkbTN7n_36bJW06Dm3OmSUA_T7G5l4" alt="Amina Ait Lafkih" class="circular-img" />
+            <div class="container">
+                <h2>Amina Ait Lafkih</h2>
             </div>
         </div>
+    </div>
 
-        <div class="column">
-            <div class="card">
-                <img src="https://th.bing.com/th/id/OIP.27-tCtXbuqlznsniacbsAgHaDn?pid=ImgDet&amp;rs=1"
-                    alt="Nouhaila Ahziz" class="circular-img"/>
-                <div class="container">
-                    <h2>Nouhaila Akhziz</h2>
-
-                    
-                </div>
+    <div class="column">
+        <div class="card">
+            <img src="https://media.licdn.com/dms/image/D4E03AQFjg4VdaNknkA/profile-displayphoto-shrink_400_400/0/1696084744199?e=1706140800&amp;v=beta&amp;t=exBb9lCVHnM4iMTimuL8mq6FKYwmaYvmx3BUWrWLOiQ" alt="Nouhaila Ahziz" class="circular-img" />
+            <div class="container">
+                <h2>Nouhaila Akhziz</h2>
             </div>
         </div>
+    </div>
+</div>
+
+        
     </div>
 
 
       </div>
-    </div>
+    
   </section>
 
 
@@ -528,25 +566,21 @@ background-size: cover;
     </section>
    
 
-    <!-- Login Section -->
-    <section id="login-section">
-        <!-- Add content for the Login section as needed -->
-    </section>
+    
 
-    <!-- Add your existing content as needed -->
-	<!-- Contact Section -->
 <section id="contact-section">
     <div class="footer-dark">
         <footer>
             <div class="container-footer">
                 <div class="row-footer">
                     
-                        <h3>in_pairs</h3>
+                        <h3 class="site">in_pairs</h3>
                         <p> We are engineering students at INPT, specializing in the Embedded system and digital services discipline.
                             Our ambition is to create innovative solutions to real-world challenges</p>
                    </div>
-                    <div class="menu">
+                    
                         <h3>Menu</h3>
+                        <div class="menu">
                         <ul>
                             <li><a href="#welcome-section">Home</a></li>
                             <li><a href="#about-us-section">About Us</a></li>
@@ -556,11 +590,17 @@ background-size: cover;
                         </ul>
                     </div>
                     <div class="col item social">
-                        <a href="#" target="_blank"><i class="icon ion-logo-github"></i></a>
-                        <a href="#" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
-                        <a href="mailto:in_pairs@gmail.com"><i class="icon ion-md-mail"></i></a>
-                        <a href="tel:+1234567890"><i class="icon ion-ios-call"></i></a>
-                    </div>
+    					<a href="https://github.com/Nouhaila-Akhziz/SmartHome"><i class="fa fa-github"></i></a>
+    					<a href="https://www.linkedin.com/in/amina-ait-lafkih-3647a9248/"><i class="fa fa-linkedin"></i></a>
+    					<a href="https://www.linkedin.com/in/nouhaila-akhziz-14748926b/"><i class="fa fa-linkedin"></i></a>
+    					<a href="mailto:in_pairs@gmail.com"><i class="fa fa-envelope" style='font-size:22px;color:red;'></i></a>
+						<a href="tel:+12345"><i class="fa fa-phone" style='font-size:25px;color:green;'></i></a>
+
+  					    
+					</div>
+
+                    
+                
                 </div>
                 <p class="copyright">in_pairs@2023</p>
             
