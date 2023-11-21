@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html
+ xmlns:faces="jakarta.faces"
+        xmlns:ui="jakarta.faces.facelets"
+        xmlns:f="jakarta.faces.core"
+        xmlns:h="jakarta.faces.html"
+        xmlns:c="jakarta.tags.core"
+        xmlns:fn="jakarta.tags.functions"
+  	 > 
+
+
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <style>
+  
+	 /* Navbar container styles */
+#navbar-container {
+    background-color: #5F9EA0 !important; /* Black background color */
+    padding: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100; /* Ensure it's on top of other elements */
+}
+
+        #navbar-container #navbar ul {
+    display: flex;
+}
+	
+        /* Navbar styles */
+        #navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px;
+        }
+
+        #navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 0 10px;
+        }
+
+        /* Logo container styles */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-container img {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        /* Section styles */
+        section {
+            padding: 50px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            width:70%;
+        }
+
+        #welcome-section {
+            background-image: url('https://demo.smartaddons.com/templates/joomla3/sj-smarthome/images/smarthome/slider1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            border-radius: 30px;
+        }
+       
+        /* Header styles */
+        .header {
+            font-size: 70px;
+            font-weight: bold;
+            margin-bottom: 0;
+            
+            
+        }
+
+        /* Sub-header styles */
+        .sub-header {
+            font-size: 24px;
+            font-family: 'Helvetica', sans-serif;
+            margin-top: 10px;
+        }
+
+        /* Service Section styles */
+        
+        #services-section {
+           background-color: #ccc;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            border-radius: 30px;
+        }
+	
+        .service-box {
+            width: 300px; /* Set width to 300px */
+            height: 225px; /* Set height to 225px */
+            display: inline-block; /* Display boxes inline */
+            margin: 20px;
+            padding: 15px; /* Adjust padding as needed */
+            text-align: center;
+            background-color: #5D8896; /* White background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+            margin-top: 10px;
+        }
+
+        .service-img {
+            height: 80px;
+            width: 80px;
+            margin: 30px;
+        }
+        
+        
+
+        .service-expression {
+            font-weight: bold;
+            margin: 40px; /* Remove margin to align text better */
+        }
+         /* About Us Section styles */
+    
+   .row {
+            margin: 0 8px;
+             margin-left: 280px;
+        }
+
+        .column {
+            float: left;
+            width: 44,4%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+            text-align: center;
+            margin-top: 78px;
+            
+        }
+
+        .container {
+            padding: 10px 16px;
+        }
+
+        .container::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .title {
+            color: grey;
+        }
+
+       
+
+        
+        .circular-img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    
+/*NEW CSS*/
+/* About Us Section styles */
+/* About Us Section styles */
+#about-us-section {
+    background-color: #CCC;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-end; /* Align content to the right */
+    margin-top: 80px;
+    border-radius: 30px;
+}
+#contact-section{
+background-color:#282d32;
+background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            backgroud-position: center;
+            height: 70vh;
+            width: 100%;
+            display: flex;
+            
+
+}
+.about-section h1 {
+    font-size: 70px; /* Change font size to match the header */
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 1px;
+    align-self: flex-end; /* Align header to the top right */
+    margin-top: 1px;
+}
+
+.about-section-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* Align content to the top right */
+}
+
+
+
+.about-section p {
+    font-size: 20px; /* Increase font size for the paragraph */
+    margin-top: 70px;
+    text-align: justify; /* Justify the text */
+    margin-left: 80px; /* Push the paragraph to the right */
+    color: #F5F5F5;
+    font-family: 'Helvetica';
+    font-weight: normal;
+}
+
+
+.about-section a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about {
+    width: 100%;
+}
+
+
+.about-section-col {
+    display: flex;
+    justify-content: flex-end; /* Aligner vers la droite */
+    align-items: center;
+    
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.about-section-col .about-img, .about-img1 {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #ccc;
+    object-fit: cover;
+    margin-left: 10px; /* Ajustez la marge comme nécessaire */
+    align-items:aligned;
+}
+
+.about-name, .about-name1 {
+    font-size: 18px;
+    color: #333; /* Vous pouvez ajuster la couleur selon vos besoins */
+    font-family: 'Helvetica';
+}
+
+
+
+
+
+
+
+
+.services-section .inner-width {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin-left: 1px;
+    background-color: #ccc; /* Set the background color to gray */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    
+}
+/* Footer Styles */
+
+
+.footer-dark h3 {
+    margin-top: 220px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left:520px;
+}
+
+.footer-dark p {
+    opacity: 0.6;
+    font-size: 14px;
+    margin-left:520px;
+}
+
+.footer-dark ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-left:520px;
+}
+
+.footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.footer-dark ul a:hover {
+    opacity: 0.8;
+}
+
+.footer-dark .item.social {
+    text-align: center;
+    margin-left:520px;
+}
+
+.footer-dark .item.social > a {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75;
+   
+}
+
+.footer-dark .item.social > a:hover {
+    opacity: 0.9;
+}
+
+.footer-dark .copyright {
+    text-align: center;
+    padding-top: 24px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.footer-dark .menu {
+    margin-top: 20px; /* Adjust margin as needed */
+    text-align: center;
+}
+
+.footer-dark .menu ul {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-dark .menu ul li {
+    margin: 0 15px; /* Adjust margin between menu items */
+}
+
+.footer-dark .item.social {
+    text-align: center;
+}
+
+    
+        
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container">
+    <div class="logo-container">
+        <img src="https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg" alt="New Logo" />
+        in_pairs.site
+    </div>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="#about-us-section">About Us</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+            <li><a href="#services-section">Services</a></li>
+            <li><a href="#login-section">Login</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <!-- Welcome Section -->
+    <section id="welcome-section">
+        <h1 class="header">Smart Home</h1>
+        <p class="sub-header">Your Home, your command</p>
+    </section>
+    
+
+      <!-- About Us Section -->
+  <section id="about-us-section" class="about-section">
+    <div class="inner-width">
+      <h1>About us</h1>
+      <div class="about-section-row">
+        <div class="about-section-col">
+          <div class="about">
+            <p>
+             
+         As engineering students at INPT, we specialize in Embedded Systems and Digital Services, delving into the 
+         intricate fusion of hardware and software. Our academic journey is driven by a passion for innovation, where
+          we aim to bridge theoretical knowledge with practical applications. Through rigorous coursework and hands-on 
+          projects, we aspire to tackle real-world challenges by creating cutting-edge solutions. This focus not only 
+          sharpens our technical skills but also instills in us the ability to adapt to the dynamic landscape of technology. 
+          We are dedicated to pushing the boundaries of what's possible, aspiring to make meaningful contributions
+          to the ever-evolving field of engineering. Our mission is to be at the forefront of technological advancements,
+          crafting solutions that redefine the way we interact with the digital world.</p>
+          </div>
+        </div>
+        <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.27-tCtXbuqlznsniacbsAgHaDn?pid=ImgDet&amp;rs=1" alt="Amina Ait Lafkih" class="circular-img"/>
+                <div class="container">
+                    <h2>Amina Ait Lafkih</h2>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.27-tCtXbuqlznsniacbsAgHaDn?pid=ImgDet&amp;rs=1"
+                    alt="Nouhaila Ahziz" class="circular-img"/>
+                <div class="container">
+                    <h2>Nouhaila Akhziz</h2>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Contact Section -->
+    
+
+    <!-- Services Section -->
+    
+    <section id="services-section"  class="service" >
+    <div class="inner-width">
+        <h1 class="header">All our services</h1>
+
+        <!-- Service Boxes -->
+        <div class="service-box">
+            <img class="service-img"
+                src="https://template84608.motopreview.com/mt-demo/84600/84608/mt-content/uploads/2019/08/mt-1872-icon-7.png"
+                alt="Door Contact" />
+            <p class="service-expression">Door Contact</p>
+        </div>
+
+        <div class="service-box">
+            <img class="service-img"
+                src="https://template84608.motopreview.com/mt-demo/84600/84608/mt-content/uploads/2019/08/mt-1872-icon-4.png"
+                alt="Monitor Sensor" />
+            <p class="service-expression">Monitor Sensor</p>
+        </div>
+
+        <div class="service-box">
+            <img class="service-img"
+                src="https://template84608.motopreview.com/mt-demo/84600/84608/mt-content/uploads/2019/08/mt-1872-icon-9.png"
+                alt="Weather Sensor" />
+            <p class="service-expression">Weather Sensor</p>
+        </div>
+
+        <div class="service-box">
+            <img class="service-img"
+                src="https://template84608.motopreview.com/mt-demo/84600/84608/mt-content/uploads/2019/08/mt-1872-icon-11.png"
+                alt="Climate Control" />
+            <p class="service-expression">Climate Control</p>
+        </div>
+
+        <div class="service-box">
+            <img class="service-img"
+                src="https://template84608.motopreview.com/mt-demo/84600/84608/mt-content/uploads/2019/08/mt-1872-icon-10.png"
+                alt="Alarm Detector" />
+            <p class="service-expression">Alarm Detector</p>
+        </div>
+       </div>
+    </section>
+   
+
+    <!-- Login Section -->
+    <section id="login-section">
+        <!-- Add content for the Login section as needed -->
+    </section>
+
+    <!-- Add your existing content as needed -->
+	<!-- Contact Section -->
+<section id="contact-section">
+    <div class="footer-dark">
+        <footer>
+            <div class="container-footer">
+                <div class="row-footer">
+                    
+                        <h3>in_pairs</h3>
+                        <p> We are engineering students at INPT, specializing in the Embedded system and digital services discipline.
+                            Our ambition is to create innovative solutions to real-world challenges</p>
+                   </div>
+                    <div class="menu">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="#welcome-section">Home</a></li>
+                            <li><a href="#about-us-section">About Us</a></li>
+                            <li><a href="#contact-section">Contact</a></li>
+                            <li><a href="#services-section">Services</a></li>
+                            <li><a href="#login-section">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="col item social">
+                        <a href="#" target="_blank"><i class="icon ion-logo-github"></i></a>
+                        <a href="#" target="_blank"><i class="icon ion-logo-linkedin"></i></a>
+                        <a href="mailto:in_pairs@gmail.com"><i class="icon ion-md-mail"></i></a>
+                        <a href="tel:+1234567890"><i class="icon ion-ios-call"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">in_pairs@2023</p>
+            
+        </footer>
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
