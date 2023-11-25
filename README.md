@@ -42,19 +42,19 @@ Sprint Backlog:
 
    📚 sprint 2 backlog:
 
-   ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/a7746260-c4b9-4de2-9dc3-4933f32f2d96)
+ ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/a7746260-c4b9-4de2-9dc3-4933f32f2d96)
 
    📚 sprint 3 backlog:
 
-   ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/5791b393-60cf-4622-a1eb-a7b22e455b5b)
+![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/5791b393-60cf-4622-a1eb-a7b22e455b5b)
   
    📚 sprint 4 backlog:
 
-   ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/694b6035-4ba0-43c1-b3c8-ace92317f58d)
+![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/694b6035-4ba0-43c1-b3c8-ace92317f58d)
    
    📚 sprint 4 backlog:
 
-   ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/9c9e8624-f600-4eed-b0dc-bf7e6f744381)
+![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/9c9e8624-f600-4eed-b0dc-bf7e6f744381)
 
 
 
