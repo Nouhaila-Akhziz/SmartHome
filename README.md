@@ -3,8 +3,8 @@
 ![in_pairs Logo](https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg)
 
 ## Project Contributors:
-- [Amina Ait LAFKIH]([LinkedIn_Link_Amina](https://www.linkedin.com/in/amina-ait-lafkih/))
-- [Nouhaila Akhziz](https://www.linkedin.com/in/nouhaila-akhziz-14748926b/))
+- [Amina Ait LAFKIH](https://www.linkedin.com/in/amina-ait-lafkih/)
+- [Nouhaila Akhziz](https://www.linkedin.com/in/nouhaila-akhziz-14748926b/)
 
 ## Introduction
 
@@ -53,7 +53,7 @@ We welcome contributions to enhance in_pairs. To contribute, follow these steps:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License.
 
 ## Contact
 
