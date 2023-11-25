@@ -1,10 +1,10 @@
 
-# in_pairs - Your Home ,Your Command
+# in_pairs : Your Home ,Your Command
 ![in_pairs Logo](https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg)
 
 ## Project Contributors:
-- Amina Ait LAFKIH
-- Nouhaila Akhziz
+- [Amina Ait LAFKIH]([LinkedIn_Link_Amina](https://www.linkedin.com/in/amina-ait-lafkih/))
+- [Nouhaila Akhziz](https://www.linkedin.com/in/nouhaila-akhziz-14748926b/))
 
 ## Introduction
 
@@ -25,7 +25,6 @@ in_pairs is built using a variety of technologies to provide a robust and effici
 - **JavaServer Faces (JSF):** JSF is a Java web application framework used for building component-based user interfaces.
 
 - **XHTML:** Extensible Hypertext Markup Language (XHTML) is used for structuring the presentation layer of in_pairs, providing a clean and well-defined markup.
-
 ## Getting Started
 
 1. **Account Setup:**
