@@ -14,9 +14,11 @@ Welcome to in_pairs, your central platform for intelligent management of your sm
 ##  Use case Diagram
 
 ## Product Backlog
-We have opted for the Agile (Scrum) methodology to manage this project as it provides better control over the final product, increases efficiency, and yields a higher return on investment.
-  ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/ffdd8f71-287e-4b08-95f0-e3d8c33a4584)
-  ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/8585e7a5-b194-4ef9-bc8a-8292a5a5ad92)
+We have opted for the Agile (Scrum) methodology to manage this project as it provides better control over the final product, increases efficiency,
+and yields a higher return on investment.
+
+![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/ffdd8f71-287e-4b08-95f0-e3d8c33a4584)
+![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/8585e7a5-b194-4ef9-bc8a-8292a5a5ad92)
 
 To organize our work based on the SCRUM methodology, we will be using the Jira Software platform. We started by setting up the server in Jira Software.
 
