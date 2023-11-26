@@ -13,6 +13,8 @@ Welcome to in_pairs, your central platform for intelligent management of your sm
 
 ##  Use case Diagram
 
+![WhatsApp Image 2023-10-14 à 22 49 01_e3b36818](https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/ca86d3db-6876-461b-a669-7597e9b4b572)
+
 ## Product Backlog
 We have opted for the Agile (Scrum) methodology to manage this project as it provides better control over the final product, increases efficiency,
 and yields a higher return on investment.
