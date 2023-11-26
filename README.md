@@ -1,9 +1,28 @@
 
-  
-
 
 #  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3ec9ea1b-5795-49cc-af49-008d63bb91c1" alt="in_pairs Logo" style="width:3%;">  in_pairs - Intelligent Smart Home Management Platform  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3ec9ea1b-5795-49cc-af49-008d63bb91c1" alt="in_pairs Logo" style="width:3%;">
- ### Home:
+
+# Table of Contents
+1. Home
+2. Login
+3. Admin Page
+4. User Page
+5. Project Contributors
+6. Introduction
+7. Use Case Diagram
+8. Product Backlog
+9. Features
+10. Technologies Used
+11. Getting Started
+12. Security Aspect
+13. Admin
+14. User
+15. Future Plans
+16. Contributing
+17. License
+18. Contact
+
+ ### Home: <a name="home"></a>
 <!-- First row -->
 <p float="left">
   <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3e2dcd70-b850-44b1-ac38-2e76cb945e69" width="45%" />
@@ -15,7 +34,9 @@
 <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/96cf1505-efc8-4f89-bc90-449bf45cc0da" width="45%" />
 </p>
 
-### Login:
+
+
+### Login: <a name="login"></a>
 
 <!-- Second row -->
 <p float="left">
@@ -23,7 +44,7 @@
   <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/03a45991-4883-452c-beb2-02405597a572" width="45%" />
 </p>
 
-### Admin Page:
+### Admin Page: <a name="admin-page"></a>
 
 <!-- Third row -->
 <p float="left">
@@ -45,7 +66,7 @@
 <p float="left">
 <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/cedee41f-13e8-4dc2-82a2-f44047ff0ec1" width="45%" />
 
- ### User Page:
+ ### User Page:   <a name="user-page"></a>
  
 </p>
 <p float="left">
@@ -53,11 +74,11 @@
  </p>
 
 
-## Project Contributors:
+## Project Contributors: <a name="project-contributors"></a>
 - [Amina Ait LAFKIH](https://www.linkedin.com/in/amina-ait-lafkih/)
 - [Nouhaila Akhziz](https://www.linkedin.com/in/nouhaila-akhziz-14748926b/)
 
-## Introduction
+## Introduction   
 
 Welcome to in_pairs, your central platform for intelligent management of your smart home ecosystem. With in_pairs, you're in command, taking control of your devices and creating personalized automations that seamlessly integrate into your daily life. Embracing the power of home automation, in_pairs empowers users to enhance their living spaces, ensuring a connected and efficient lifestyle. Home automation, or "smarthome," is revolutionizing household management by automating daily tasks, providing comfort, energy savings, and security. With extensive customization, users can create scenarios tailored to their preferences. Remote accessibility allows control of devices even while on the go. Resource management offers real-time visibility into consumption. Continuously evolving, home automation ensures future adaptability to technological advancements.
 ### Welcome to a smarter way of living with in_pairs!
