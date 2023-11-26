@@ -1,5 +1,5 @@
 
- 
+  
 
 
 #        <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3ec9ea1b-5795-49cc-af49-008d63bb91c1" alt="in_pairs Logo" style="width:3%;"> in_pairs - Intelligent Smart Home Management Platform  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3ec9ea1b-5795-49cc-af49-008d63bb91c1" alt="in_pairs Logo" style="width:3%;">
