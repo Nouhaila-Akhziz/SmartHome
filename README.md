@@ -1,6 +1,7 @@
-
+ <img src="[https://github.com/bamouhimane/Blood_donation/assets/125123163/66057ec5-6b13-4f32-afa8-a911888f3612](https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg)" width="30%" >![in_pairs Logo]()
 # in_pairs - Intelligent Smart Home Management Platform 
-![in_pairs Logo](https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg)
+
+![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3e2dcd70-b850-44b1-ac38-2e76cb945e69)
 
 ## Project Contributors:
 - [Amina Ait LAFKIH](https://www.linkedin.com/in/amina-ait-lafkih/)
