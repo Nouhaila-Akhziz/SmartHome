@@ -1,20 +1,19 @@
-public class Regle {
+    public class Regle {
 	private int id;
 	private int idAppareil;
-	private String condition;
+	private String conditionString;
 	private String action;
 	private int idUtilisateur;
 
 	// Constructor
-	public Regle(int id, int idAppareil, String condition, String action, int idUtilisateur) {
+	public Regle(int id, int idAppareil, String conditionString, String action, int idUtilisateur) {
 		this.id = id;
 		this.idAppareil = idAppareil;
-		this.condition = condition;
+		this.conditionString =conditionString;
 		this.action = action;
 		this.idUtilisateur = idUtilisateur;
 	}
 
-	// Getters and setters
 	public int getId() {
 		return id;
 	}
@@ -31,19 +30,19 @@ public class Regle {
 		this.idAppareil = idAppareil;
 	}
 
-	public String getCondition() {
-		return condition;
+	public String getCondition_column() {
+		return conditionString;
 	}
 
-	public void setCondition(String condition) {
-		this.condition = condition;
+	public void setCondition_column(String condition_column) {
+		this.conditionString = condition_column;
 	}
 
-	public String getAction() {
+	public String getAction_column() {
 		return action;
 	}
 
-	public void setAction(String action) {
+	public void setAction_column(String action) {
 		this.action = action;
 	}
 
@@ -54,4 +53,9 @@ public class Regle {
 	public void setIdUtilisateur(int idUtilisateur) {
 		this.idUtilisateur = idUtilisateur;
 	}
+
+	// Getters and setters
+	
 }
+
+    

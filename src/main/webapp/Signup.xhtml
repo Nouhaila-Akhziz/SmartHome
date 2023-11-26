@@ -6,6 +6,12 @@
         xmlns:h="jakarta.faces.html"
         xmlns:c="jakarta.tags.core"
         xmlns:fn="jakarta.tags.functions"
+              xmlns:o="http://omnifaces.org/ui"
+              xmlns="http://www.w3.org/1999/xhtml"
+              
+              
+              
+        
   	 > 
 <h:head>
     <title>Create an Account on In_pairs</title>
@@ -98,30 +104,42 @@
 			     <label for="email">Email:</label>
 			     <h:inputText type="email" id="email" name="email" class="input-field" placeholder="Enter your email" value="#{signupBean.utilisateur.adresseEmail}"/> 
 			   </div>
-			   <div class="form-group">
-			      <label for="password">Password:</label>
-			      <h:inputText type="password" id="password" name="password" class="input-field" placeholder="Enter your password" value="#{signupBean.utilisateur.motDePasseHash}"/>
-			   </div>  
-			   <div class="form-group">
-			      <label for="confirmPassword">Confirm Password:</label>
-			      <h:inputText type="password" id="confirmPassword" name="confirmPassword" class="input-field" placeholder="Confirm your password"/>
-			   </div>
-			   <div class="form-group">
-			      <label for="niveauAcces">Access Level:</label>
-			        <select id="niveauAcces" name="niveauAcces" class="input-field">
-			        <option value="#{signupBean.utilisateur.niveauAcces}">User</option>
-			        <option value="#{signupBean.utilisateur.niveauAcces}">Admin</option>
-			        
-		        	</select>
-			   </div>
-			   <h:commandButton type="submit" styleClass="submit-button" value="Sign up" action="#{signupBean.register()}"/>
-			</h:form>
+			     <div class="form-group">
+        <label for="password">Password:</label>
+        <h:inputText type="password" id="password" name="password" class="input-field" placeholder="Enter your password" value="#{signupBean.utilisateur.motDePasseHash}"/>
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <h:inputText type="password" id="confirmPassword" name="confirmPassword" class="input-field" placeholder="Confirm your password"/>
+        <o:validateEqual for="confirmPassword"  message="Passwords do not match" />
+        <h:message for="confirmPassword" style="color: red"/>
+    </div>
+
+
+
+<!-- ... Other code ... -->
+<div class="form-group">
+   				<div class="form-group">
+        <label for="niveauAcces">Access Level:</label>
+        <h:selectOneMenu id="niveauAcces" value="#{signupBean.utilisateur.niveauAcces}" class="input-field">
+            <f:selectItem itemValue="User" itemLabel="User" />
+            <f:selectItem itemValue="Admin" itemLabel="Admin" />
+        </h:selectOneMenu>
+    </div>
+
+				</div>
+				            <h:commandButton type="submit" styleClass="submit-button" value="Sign up" action="#{signupBean.register()}" />
+				
+				</h:form>
+			
 			<div class="login-link">
 			 <h3>
 			     Already have an account ?
 			   <a href="Login.xhtml">Sign in</a>
 			 </h3>
 			</div>
+			
 		</div>
 </h:body>
 </html>

@@ -10,5 +10,7 @@ public interface UtilisateurIDAO {
 	void update(Utilisateur utilisateur);
 
 	void delete(int id);
+
+	Utilisateur findi(String nomUtilisateur);
 	
 }

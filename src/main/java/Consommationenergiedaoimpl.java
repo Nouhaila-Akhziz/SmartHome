@@ -9,13 +9,18 @@ import java.util.Date;
 import java.util.List;
 
 public class Consommationenergiedaoimpl implements ConsommationenergieIDAO {
+	Connection connection;
+	public Consommationenergiedaoimpl() {
+	}
+	
 
 	@Override
 	public Consommationenergie find(int id) {
 		Consommationenergie consommationEnergie = null;
-		Connection connection = Singleconnection.getConnection(); // Corrected method name
 		String query = "SELECT * FROM Consommation_Energie WHERE ID = ?";
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+		
+		try ( Connection connection = Singleconnection.getConnection();
+				PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 			preparedStatement.setInt(1, id);
 			ResultSet rs = preparedStatement.executeQuery();
 			if (rs.next()) {
@@ -33,31 +38,34 @@ public class Consommationenergiedaoimpl implements ConsommationenergieIDAO {
 
 	@Override
 	public List<Consommationenergie> findAll() {
-		List<Consommationenergie> consumptions = new ArrayList<>();
-		Connection connection = Singleconnection.getConnection();
-		String query = "SELECT * FROM Consommation_Energie";
-		try (Statement statement = connection.createStatement(); ResultSet rs = statement.executeQuery(query)) {
-			while (rs.next()) {
-				int id = rs.getInt("ID");
-				int idAppareil = rs.getInt("IDAppareil");
-				double consommationWatts = rs.getDouble("ConsommationWatts");
-				Timestamp timestamp = rs.getTimestamp("DateHeure");
-				Date dateHeure = new Date(timestamp.getTime());
-				Consommationenergie consommationEnergie = new Consommationenergie(id, idAppareil, consommationWatts,
-						dateHeure);
-				consumptions.add(consommationEnergie);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return consumptions;
+	    List<Consommationenergie> consumptions = new ArrayList<>();
+	     // Assumes you have a class named Singleconnection with a static method getConnection to obtain a database connection
+	    String query = "SELECT * FROM Consommation_Energie";
+	    try (Connection connection = Singleconnection.getConnection();
+	    		Statement statement = connection.createStatement(); ResultSet rs = statement.executeQuery(query)) {
+	        while (rs.next()) {
+	            int id = rs.getInt("id");
+	            int idAppareil = rs.getInt("idAppareil");
+	            double consommationWatts = rs.getDouble("ConsommationWatts");
+	            Timestamp timestamp = rs.getTimestamp("dateHeure");
+	            Date dateHeure = new Date(timestamp.getTime());
+	            Consommationenergie consommationEnergie = new Consommationenergie(id, idAppareil, consommationWatts,
+	                    dateHeure);
+	            consumptions.add(consommationEnergie);
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return consumptions;
 	}
+
 
 	@Override
 	public void save(Consommationenergie consommationEnergie) {
-		Connection connection = Singleconnection.getConnection(); // Corrected method name
+		 // Corrected method name
 		String query = "INSERT INTO Consommation_Energie (ID, IDAppareil, ConsommationWatts, DateHeure) VALUES (?, ?, ?, ?)";
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+		try (Connection connection = Singleconnection.getConnection();
+				PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 			preparedStatement.setInt(1, consommationEnergie.getId());
 			preparedStatement.setInt(2, consommationEnergie.getIdAppareil());
 			preparedStatement.setDouble(3, consommationEnergie.getConsommationWatts());
@@ -70,9 +78,10 @@ public class Consommationenergiedaoimpl implements ConsommationenergieIDAO {
 
 	@Override
 	public void update(Consommationenergie consommationEnergie) { // Corrected parameter type
-		Connection connection = Singleconnection.getConnection(); // Corrected method name
+		// Corrected method name
 		String query = "UPDATE Consommation_Energie SET IDAppareil = ?, ConsommationWatts = ?, DateHeure = ? WHERE ID = ?";
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+		try (Connection connection = Singleconnection.getConnection();
+				PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 			preparedStatement.setInt(1, consommationEnergie.getIdAppareil());
 			preparedStatement.setDouble(2, consommationEnergie.getConsommationWatts());
 			preparedStatement.setTimestamp(3, new Timestamp(consommationEnergie.getDateHeure().getTime()));

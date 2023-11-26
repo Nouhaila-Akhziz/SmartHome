@@ -1,52 +1,49 @@
 import java.security.MessageDigest;
 
+
+
 import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDate;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 public class Utilisateur {
 
 	private int id;
-	private String nomUtilisateur="Amina";
-	private String motDePasseHash="123"; 
-	private String adresseEmail="illisiaram@gmail.com";
-	private String niveauAcces="Admin";
+	private String nomUtilisateur;
+	private String motDePasseHash; 
+	private String adresseEmail;
+	private String niveauAcces;
 
 	public Utilisateur(int id, String nomUtilisateur, String motDePasse, String adresseEmail,String niveauAcces) {
 		this.id = id;
 		this.nomUtilisateur = nomUtilisateur;
-		this.motDePasseHash = hashPassword(motDePasse); 
+		this.motDePasseHash = motDePasse; 
 		this.adresseEmail = adresseEmail;
 		this.niveauAcces = niveauAcces;
 	}
 	public Utilisateur() {
-		
+	  
+	}
+
+  
+	
+	public String hashPassword(String password) {
+		 return BCrypt.hashpw(password, BCrypt.gensalt());
+	}
+
+	public boolean isPasswordCorrect(String inputPassword) {
+        return BCrypt.checkpw(inputPassword, getMotDePasseHash2());
 	}
 
 	
-	private String hashPassword(String password) {
-		try {
-			MessageDigest digest = MessageDigest.getInstance("SHA-256");
-			byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
-			StringBuilder hexString = new StringBuilder();
-			for (byte b : hash) {
-				hexString.append(String.format("%02x", b));
-			}
-			return hexString.toString();
-		} catch (NoSuchAlgorithmException e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	// Vérifier si le mot de passe donné est correct
-	public boolean isPasswordCorrect(String inputPassword) {
-		return hashPassword(inputPassword).equals(motDePasseHash);
-	}
 
 	// Mettre à jour le mot de passe de l'utilisateur
 	public void changePassword(String newPassword) {
-		this.motDePasseHash = hashPassword(newPassword);
+		this.motDePasseHash = newPassword;
 	}
+
 	public int getId() {
 		return id;
 	}
@@ -61,6 +58,10 @@ public class Utilisateur {
 	}
 	public String getMotDePasseHash() {
 		return motDePasseHash;
+	}
+	
+	public String getMotDePasseHash2() {
+		return hashPassword(motDePasseHash);
 	}
 	public void setMotDePasseHash(String motDePasseHash) {
 		this.motDePasseHash = motDePasseHash;
@@ -89,4 +90,6 @@ public class Utilisateur {
 	    }
 	
 
-	 }}
+	 }
+	
+	}

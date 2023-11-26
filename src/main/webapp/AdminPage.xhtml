@@ -5,9 +5,16 @@
 <head>
     <title>My Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8"/>
 
     <style>
-  .logo-container {
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f6f8fa;
+        }
+
+        .logo-container {
             display: flex;
             align-items: center;
             position: fixed;
@@ -23,93 +30,83 @@
             height: 30px;
             width: 30px;
             margin-right: 10px;
-            top:0;
+            top: 0;
         }
 
-        /* Section styles */      
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
 
-  .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
 
-input:checked + .slider {
-  background-color: #2196F3;
-}
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
+        .slider.round {
+            border-radius: 34px;
+        }
 
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
+        .slider.round:before {
+            border-radius: 50%;
+        }
 
-.slider.round:before {
-  border-radius: 50%;
-}
-	 /* Navbar container styles */
-#navbar-container {
-    background-color: #5F9EA0 !important; /* Black background color */
-    padding: 25px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    z-index: 100; /* Ensure it's on top of other elements */
-}
+        #navbar-container {
+            background-color: #5F9EA0 !important;
+            padding:40px; 
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            z-index: 100;
+        }
 
         #navbar-container #navbar ul {
-    display: flex;
-}
-	
-        /* Navbar styles */
+            display: flex;
+        }
+
         #navbar {
             position: fixed;
             top: 0;
             right: 0;
-            padding: 10px;
+            padding: 20px;
         }
 
         #navbar ul {
@@ -126,22 +123,39 @@ input:checked + .slider:before {
             margin: 0 10px;
         }
 
-       
-
-        /* Custom styles for the sections */
-        .custom-section {
-            background-color: #B0E0E6;
+        .background-container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            background: 
+                url('https://html.cwsthemes.com/ingenious/images/background/1.jpg') center center / cover no-repeat;
+                
+                
+            background-size: cover;
             border-radius: 30px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             width: 100%;
-            padding: 50px; /* Adjust padding as needed */
-            text-align: center;
-            color: white;
-            text-shadow: 2px 2px 4px #000000;
-            margin-top: 20px;
-        }
-    </style>
-</head>
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: cover;
+            border-radius: 250px;
+        
 
+        }
+        p {
+    font-size: 22px; /* Adjust the size as needed */
+}
+        
+    </style>
+
+</head>
 <body>
      <!-- Navbar -->
     <div id="navbar-container">
@@ -151,74 +165,30 @@ input:checked + .slider:before {
         </div>
         <nav id="navbar">
             <ul>
-                <li><a href="#welcome-section">Smart Devices</a></li>
-                <li><a href="#about-us-section">Users</a></li>
-                <li><a href="#contact-section">Temperature</a></li>
-                <li><a href="#services-section">Consumation</a></li>
-                <li><a href="#login-section">History</a></li>
+                <li><a href="AdminPage0.xhtml">Smart Devices</a></li>
+                <li><a href="UsersSection.xhtml">Users</a></li>
+                <li><a href="AdminPage1.xhtml">Temperature</a></li>
+                <li><a href="Consummatioenergie.xhtml">Consumation</a></li>
+                <li><a href="Journal.xhtml">History</a></li>
             </ul>
         </nav>
     </div>
-    <!-- ... (navbar code) ... -->
+    
+   <section id="welcome-section" class="background-container" >   
+    <h1 class="header" style="font-size: 50px; font-weight: sans-serif; margin-bottom: 20px;color:#72A0C1;"> Smart Home</h1>
+    <p class="sub-header" style="color:#4C516D; font-weight:bolder;">Welcome #{signupBean.utilisateur.nomUtilisateur}</p>
+    <p class="sub-header" style="color:#4C516D; font-weight:bolder; ">Take full control of your home</p>
+    
 
-    <!-- Welcome Section -->
-   <section id="welcome-section" class="custom-section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;
-            width: 100%;">
-    <h1 class="header" style="font-size: 50px; font-weight: bold; margin-bottom: 20px;">Smart Home</h1>
-    <p class="sub-header">Welcome #{signupBean.utilisateur.nomUtilisateur}</p>
-    <p class="sub-header">Take full control of your home</p>
+    
+        
+    
 
-    <div style="display: flex; align-items: center; margin-top: 20px;">
-        <div style="margin-right: 20px; text-align: center;">
-            <!-- Smart Light -->
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span></input>
-            </label>
-            <img src="https://cdn4.iconfinder.com/data/icons/smart-home-38/100/smart-home-02-512.png" alt="smartlight" style="height: 80px; width: 80px; margin: 10px;"></img>
-            <h1>Smart light</h1>
-        </div>
-
-        <div style="text-align: center;">
-            <!-- Smart Door -->
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span></input>
-            </label>
-            <img src="https://cdn-icons-png.flaticon.com/512/3168/3168605.png" alt="smartdoor" style="height: 80px; width: 80px; margin: 10px;"></img>
-            <h1>Smart door</h1>
-        </div>
-    </div>
-
-    <img src="https://i.pinimg.com/564x/19/95/87/199587917eb4b39d718f369b4385f115.jpg" alt="img-home" style="position: absolute; top: 120px; right: 0; height: 500px; width: 500px; border-radius: 50%;"></img>
+    
 
 </section>
 
 
-    <!-- Other Sections -->
-    <!-- Section 2 -->
-    <section class="custom-section" style=" height: 100vh;
-            width: 100% ;">
-        <!-- Content of the second section -->
-    </section>
-
-    <!-- Section 3 -->
-    <section class="custom-section" style=" height: 100vh;
-            width: 100% ;">
-        <!-- Content of the third section -->
-    </section>
-
-    <!-- Section 4 -->
-    <section class="custom-section" style=" height: 100vh;
-            width: 100% ;">
-        <!-- Content of the fourth section -->
-    </section>
-
-    <!-- Section 5 -->
-    <section class="custom-section" style=" height: 100vh;
-            width: 100% ;">
-        <!-- Content of the fifth section -->
-    </section>
 
     <script src="script.js"></script>
 </body>

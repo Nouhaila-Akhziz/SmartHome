@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns:faces="jakarta.faces" xmlns:ui="jakarta.faces.facelets" xmlns:f="jakarta.faces.core"
+  xmlns:h="jakarta.faces.html" xmlns:c="jakarta.tags.core" xmlns:fn="jakarta.tags.functions" xmlns:p="http://primefaces.org/ui">
+
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <h:outputStylesheet library="primefaces" name="themes/bootstrap/theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        .ui-splitbutton {
+        margin-right: .5rem;
+    }
+    body{
+    width:100%;}
+       
+       .Retour{right:0;}
+	.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}ze: 20px;
+            font-weight: bold;
+        }
+
+        .logo-container img {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            top:0;
+        }
+
+        /* Section styles */      
+
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+	 /* Navbar container styles *
+        body {
+            font-family: Helvetica;
+            -webkit-font-smoothing: antialiased;
+            background: #f6f8fa; /* Changement de la couleur de fond */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        login-link { 
+            margin-top: 10px; 
+            font-size: 14px; 
+            color:#586069;
+       }
+        .Usersection-container { 
+            background-color: #fff; 
+            border: 1px solid #d1d5da; 
+            border-radius: 5px; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+            padding: 20px; 
+            text-align: center; 
+            
+            width: 800px; 
+            margin-left: 400px; 
+            margin-right:440px;
+        }
+       
+
+        .logo-container img {
+            height: 70px; 
+            width: 70px; 
+            margin-right: 10px; 
+            margin-top: 2px; 
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: black;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Table Styles */
+
+        .table-wrapper {
+            margin: 10px 0; /* Adjusted margin */
+            box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+            overflow-x: auto; /* Added horizontal scroll for smaller screens */
+        }
+
+        .fl-table {
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: normal;
+            border: none;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            white-space: nowrap;
+            background-color: transparent; /* Make the background transparent */
+        }
+
+        .fl-table td, .fl-table th {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .fl-table td {
+            border-right: 1px solid #f8f8f8;
+            font-size: 12px;
+        }
+
+        .fl-table thead th {
+            color: #ffffff;
+            background: #4FC3A1;
+        }
+
+        .fl-table thead th:nth-child(odd) {
+            color: #ffffff;
+            background: #324960;
+        }
+
+        .fl-table tr:nth-child(even) {
+            background: #F8F8F8;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 767px) {
+            .fl-table {
+                display: block;
+                width: 100%;
+            }
+
+            .table-wrapper:before {
+                content: "Scroll horizontally >";
+                display: block;
+                text-align: right;
+                font-size: 11px;
+                color: white;
+                padding: 0 0 10px;
+            }
+
+            .fl-table thead, .fl-table tbody, .fl-table thead th {
+                display: block;
+            }
+
+            .fl-table thead th:last-child {
+                border-bottom: none;
+            }
+
+            .fl-table thead {
+                float: left;
+            }
+
+            .fl-table tbody {
+                width: auto;
+                position: relative;
+                overflow-x: auto;
+            }
+
+            .fl-table td, .fl-table th {
+                padding: 20px .625em .625em .625em;
+                height: 60px;
+                vertical-align: middle;
+                box-sizing: border-box;
+                overflow-x: hidden;
+                overflow-y: auto;
+                width: 120px;
+                font-size: 13px;
+                text-overflow: ellipsis;
+            }
+
+            .fl-table thead th {
+                text-align: left;
+                border-bottom: 1px solid #f7f7f9;
+            }
+
+            .fl-table tbody tr {
+                display: table-cell;
+            }
+
+            .fl-table tbody tr:nth-child(odd) {
+                background: none;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: transparent;
+            }
+
+            .fl-table tr td:nth-child(odd) {
+                background: #F8F8F8;
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tr td:nth-child(even) {
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tbody td {
+                display: block;
+                text-align: center;
+            }
+            .login-link.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.login-link.button:hover {background-color: #3e8e41}
+
+.login-link.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+        }
+        .custom-back-button {
+        font-size: 20px; /* Adjust the font size as needed */
+        padding: 15px;   /* Adjust the padding as needed */
+        background-color: green; /* Change to your desired background color */
+        color: white;   /* Change to your desired text color */
+        border: none;   /* Remove border if not needed */
+    }
+    </style>
+</head>
+
+<body>
+<h:form>
+    <!-- Button with Icon Inside -->
+    <p:commandButton action="AdminPage.xhtml" style=" padding:15px;border-radius:30px;background-color: #00FF00;"  icon="fa fa-angle-double-left" value="Welcome Page" />
+</h:form>
+
+
+ 	
+
+ <div class="login-link">
+			
+
+
+			 	
+			
+    <h:form>
+    	
+        <div class="Usersection-container">
+            <div class="logo-container">
+                <img src="https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg" alt="Smart Home Logo" width="150" height="150" style="margin-bottom: 20px;"/>
+            </div>
+            <h2 class="titre" style="font-size: 20px; font-weight: sans-serif; margin-bottom: 20px;color:#72A0C1;">Command your devices</h2>
+
+           <div style="margin-right: 20px; text-align: center;">
+            <!-- Smart Light -->
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span></input>
+            </label>
+            <img src="https://cdn4.iconfinder.com/data/icons/smart-home-38/100/smart-home-02-512.png" alt="smartlight" style="height: 80px; width: 80px; margin: 10px;"></img>
+            <h1>Smart light</h1>
+        </div>
+
+        <div style="text-align: center;">
+            <!-- Smart Door -->
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span></input>
+            </label>
+            <img src="https://cdn-icons-png.flaticon.com/512/3168/3168605.png" alt="smartdoor" style="height: 80px; width: 80px; margin: 10px;"></img>
+            <h1>Smart door</h1>
+        </div>
+        <div style="margin-right: 20px; text-align: center;">
+            <!-- Smart Light -->
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span></input>
+            </label>
+            <img src="https://template84608.motopreview.com/mt-demo/84600/84608/mt-content/uploads/2019/08/mt-1872-icon-11.png" alt="smartlight" style="height: 80px; width: 80px; margin: 10px;"></img>
+            <h1>Climate control </h1>
+        </div>
+        </div>
+    </h:form>
+    </div>
+</body>
+</html>

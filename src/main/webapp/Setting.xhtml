@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+      xmlns:p="http://primefaces.org/ui">
+
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://html.cwsthemes.com/ingenious/images/background/1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .Usersection-container {
+            background-color: #ffffff;
+            border: 1px solid #d1d5da;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 600px;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            height: 70px;
+            width: 70px;
+            margin-right: 10px;
+            margin-top: 2px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bolder;
+        }
+
+        .table-wrapper {
+            margin: 20px 0; /* Adjusted margin */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            overflow-x: auto; /* Added horizontal scroll for smaller screens */
+        }
+
+        .fl-table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .fl-table thead th {
+            background-color: #4FC3A1;
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 16px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .fl-table tbody td {
+            color: #666;
+            font-size: 14px;
+            padding: 16px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .fl-table tbody tr:hover {
+            background-color: #A9A9A9;
+        }
+
+        /* Responsive */
+        @media (max-width: 767px) {
+            .fl-table thead, .fl-table tbody, .fl-table thead th {
+                display: block;
+            }
+
+            .fl-table thead th:last-child {
+                border-bottom: none;
+            }
+
+            .fl-table tbody {
+                display: block;
+                width: auto;
+                position: relative;
+                overflow-x: auto;
+            }
+
+            .fl-table td {
+                border-bottom: 1px solid #dee2e6;
+                display: block;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h:form>
+        <div class="Usersection-container">
+            <div class="logo-container">
+                <img src="https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg" alt="Smart Home Logo" width="150" height="150" style="margin-bottom: 20px;" />
+            </div>
+            <h2>Your Smart Home Settings</h2>
+
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                        <tr>
+                            <th>idAppareil</th>
+                            <th>condition_column</th>
+                            <th>action_column</th>
+                             <th>idUtilisateur</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+					   <ui:repeat value="#{settingsBean.getSETTINGS()}" var="setting">
+					    <tr>
+					        <td>#{setting.idAppareil}</td>
+					        <td>#{setting.condition_column}</td>
+					        <td>#{setting.action_column}</td>
+					        <td>#{setting.idUtilisateur}</td>
+					    </tr>
+					</ui:repeat>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </h:form>
+</body>
+</html>

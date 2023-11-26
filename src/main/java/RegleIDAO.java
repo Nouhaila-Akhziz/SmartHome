@@ -1,4 +1,4 @@
-
+    
 import java.util.List;
 
 public interface RegleIDAO {
@@ -12,3 +12,5 @@ public interface RegleIDAO {
 
 	void delete(Regle regle);
 }
+
+    
