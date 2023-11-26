@@ -64,11 +64,11 @@ public class SignupBean implements Serializable {
     	String niveauAcces = getNiveauAccesForNomUtilisateur(utilisateur.getNomUtilisateur());
 
         if ("Admin".equals(niveauAcces)) {
-            return "AdminPage.xhtml?faces-redirect=true";
+        	return "User.xhtml?faces-redirect=true";
         } else {
-                return "User.xhtml?faces-redirect=true";}
-
-    					
+                
+              return "AdminPage.xhtml?faces-redirect=true";}
+    	 
     }
     public String loginred() {
     

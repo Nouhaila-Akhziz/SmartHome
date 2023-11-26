@@ -1,19 +1,198 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html
- xmlns:faces="jakarta.faces"
-        xmlns:ui="jakarta.faces.facelets"
-        xmlns:f="jakarta.faces.core"
-        xmlns:h="jakarta.faces.html"
-        xmlns:c="jakarta.tags.core"
-        xmlns:fn="jakarta.tags.functions"
-  	 > 
+<!DOCTYPE html>
+<html xmlns:faces="jakarta.faces" xmlns:ui="jakarta.faces.facelets" xmlns:f="jakarta.faces.core"
+  xmlns:h="jakarta.faces.html" xmlns:c="jakarta.tags.core" xmlns:fn="jakarta.tags.functions">
 
-<h:head></h:head> 
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8"/>
 
-<h:body>
-Hello
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f6f8fa;
+        }
 
-</h:body>
+        .logo-container {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
+        .logo-container img {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            top: 0;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        #navbar-container {
+            background-color: #5F9EA0 !important;
+            padding:40px; 
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        #navbar-container #navbar ul {
+            display: flex;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px;
+        }
+
+        #navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 0 10px;
+        }
+
+        .background-container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            background: 
+                url('https://html.cwsthemes.com/ingenious/images/background/1.jpg') center center / cover no-repeat;
+                
+                
+            background-size: cover;
+            border-radius: 30px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: cover;
+            border-radius: 250px;
+        
+
+        }
+        p {
+    font-size: 22px; /* Adjust the size as needed */
+}
+        
+    </style>
+
+</head>
+<body>
+     <!-- Navbar -->
+    <div id="navbar-container">
+        <div class="logo-container">
+            <img src="https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg" alt="New Logo" />
+            in_pairs.site
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="UserPage0.xhtml">Smart Devices</a></li>
+                
+                <li><a href="Adminpage1.xhtml">Temperature</a></li>
+                <li><a href="Consummatioenergie.xhtml">Consumation</a></li>
+                <li><a href="Journal.xhtml">History</a></li>
+                 <li><a href="Home.xhtml">Log out</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+   <section id="welcome-section" class="background-container" >   
+    <h1 class="header" style="font-size: 50px; font-weight: sans-serif; margin-bottom: 20px;color:#72A0C1;"> Smart Home</h1>
+    <p class="sub-header" style="color:#4C516D; font-weight:bolder;">Welcome  #{signupBean.utilisateur.nomUtilisateur}</p>
+    <p class="sub-header" style="color:#4C516D; font-weight:bolder; ">Take full control of your home</p>
+    
+
+    
+        
+    
+
+    
+
+</section>
+
+
+
+    <script src="script.js"></script>
+</body>
 
 </html>
+        

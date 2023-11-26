@@ -65,19 +65,24 @@ public class Regledaoimpl implements RegleIDAO {
 
 	@Override
 	public void update(Regle regle) {
-		Connection connection = Singleconnection.getConnection();
-		String query = "UPDATE Regles SET idAppareil = ?, condition_column = ?, action_column = ?, idUtilisateur = ? WHERE ID = ?";
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-			preparedStatement.setInt(1, regle.getIdAppareil());
-			preparedStatement.setString(2, regle.getCondition_column());
-			preparedStatement.setString(3, regle.getAction_column());
-			preparedStatement.setInt(4, regle.getIdUtilisateur());
-			preparedStatement.setInt(5, regle.getId());
-			preparedStatement.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+	    String query = "UPDATE Regles SET idAppareil = ?, conditionString = ?, action = ?, idUtilisateur = ? WHERE ID = ?";
+	    
+	    try (Connection connection = Singleconnection.getConnection();
+	         PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+	        preparedStatement.setInt(1, regle.getIdAppareil());
+	        preparedStatement.setString(2, regle.getCondition_column());
+	        preparedStatement.setString(3, regle.getAction_column());
+	        preparedStatement.setInt(4, regle.getIdUtilisateur());
+	        preparedStatement.setInt(5, regle.getId());
+
+	        int rowsAffected = preparedStatement.executeUpdate();
+	        System.out.println("Rows affected: " + rowsAffected);
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
 	}
+
+
 
 	@Override
 	public void delete(Regle regle) {

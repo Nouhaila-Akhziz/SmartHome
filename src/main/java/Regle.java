@@ -13,6 +13,8 @@
 		this.action = action;
 		this.idUtilisateur = idUtilisateur;
 	}
+public Regle() {
+}
 
 	public int getId() {
 		return id;

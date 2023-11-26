@@ -1,40 +1,41 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class testauth {
 
     public static void main(String[] args) {
-        // Instantiate your DAO class
-        Consommationenergiedaoimpl consommationdao = new Consommationenergiedaoimpl();
+    	Utilisateur utilisateur = null;
+	    String query = "SELECT * FROM Utilisateurs WHERE nomUtilisateur = ?";
+	    
+	    try (Connection connection = Singleconnection.getConnection();
+	    		PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+	        String nomUtilisateur 	="Aya";
+			preparedStatement.setString(1, nomUtilisateur);
+	        
+	        try (ResultSet rs = preparedStatement.executeQuery()) {
+	            if (rs.next()) {
+	                utilisateur = mapResultSetToUtilisateur(rs);
+	            }
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	        // Handle exception as needed
+	    }
+	    
+	    System.out.println(utilisateur);
+	    System.out.println(utilisateur.getNiveauAcces());
+    }
+    private static Utilisateur mapResultSetToUtilisateur(ResultSet rs) throws SQLException {
+        int id = rs.getInt("ID");
+        String nomUtilisateur = rs.getString("nomUtilisateur");
+        String motDePasseHash = rs.getString("motDePasseHash");
+        String adresseEmail = rs.getString("adresseEmail");
+        String niveauAcces = rs.getString("niveauAcces");
 
-        // Assuming you have already created the nomsAppareils list
-        List<Consommationenergie> consommationList = consommationdao.findAll();
-
-        // Instantiate the Appareils DAO class
-        Appareilsdaoimp appareilsDAO = new Appareilsdaoimp();
-        List<Appareils> appareilsList = appareilsDAO.findAll();
-
-        System.out.println(appareilsList);
-
-        List<String> nomsAppareils = new ArrayList<>();
-
-        // Populate nomsAppareils with the names of appareils
-        for (Appareils appareil : appareilsList) {
-            nomsAppareils.add(appareil.getNomAppareil());
-        }
-
-        // Iterate through the consommationList and replace idAppareil with the corresponding name
-        for (Consommationenergie consommation : consommationList) {
-            int idAppareil = consommation.getIdAppareil();
-            
-            // Ensure idAppareil is within the bounds of nomsAppareils list
-            if (idAppareil > 0 && idAppareil <= nomsAppareils.size()) {
-                String nomAppareil = nomsAppareils.get(idAppareil - 1);
-                consommation.setNomAppareil(nomAppareil);
-                System.out.println(consommation.getNomAppareil());
-            } else {
-                System.out.println("Non");
-            }
-        }
+        return new Utilisateur(id, nomUtilisateur, motDePasseHash, adresseEmail, niveauAcces);
     }
 }
