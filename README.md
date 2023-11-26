@@ -1,5 +1,8 @@
- <img src="[https://github.com/bamouhimane/Blood_donation/assets/125123163/66057ec5-6b13-4f32-afa8-a911888f3612](https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg)" width="30%" >![in_pairs Logo]()
-# in_pairs - Intelligent Smart Home Management Platform 
+
+ 
+
+
+#        <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3ec9ea1b-5795-49cc-af49-008d63bb91c1" alt="in_pairs Logo" style="width:3%;"> in_pairs - Intelligent Smart Home Management Platform  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3ec9ea1b-5795-49cc-af49-008d63bb91c1" alt="in_pairs Logo" style="width:3%;">
 
 ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3e2dcd70-b850-44b1-ac38-2e76cb945e69)
 
