@@ -6,6 +6,9 @@
 
 ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3e2dcd70-b850-44b1-ac38-2e76cb945e69)
 
+![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3c985332-2766-4584-837d-11cc62d5b881)
+
+
 ## Project Contributors:
 - [Amina Ait LAFKIH](https://www.linkedin.com/in/amina-ait-lafkih/)
 - [Nouhaila Akhziz](https://www.linkedin.com/in/nouhaila-akhziz-14748926b/)
