@@ -3,10 +3,54 @@
 
 
 #        <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3ec9ea1b-5795-49cc-af49-008d63bb91c1" alt="in_pairs Logo" style="width:3%;"> in_pairs - Intelligent Smart Home Management Platform  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3ec9ea1b-5795-49cc-af49-008d63bb91c1" alt="in_pairs Logo" style="width:3%;">
+ ### Home:
+<!-- First row -->
+<p float="left">
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3e2dcd70-b850-44b1-ac38-2e76cb945e69" width="45%" />
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/02097088-b59c-4997-a9e7-2883ef3eea5b" width="45%" />
+  
+</p>
+<p float="left">
+<img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3c985332-2766-4584-837d-11cc62d5b881" width="45%" />
+<img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/96cf1505-efc8-4f89-bc90-449bf45cc0da" width="45%" />
+</p>
 
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3e2dcd70-b850-44b1-ac38-2e76cb945e69)
+### Login:
 
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/3c985332-2766-4584-837d-11cc62d5b881)
+<!-- Second row -->
+<p float="left">
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/01ac491b-a654-4d72-bf9c-71abe27b1dc1" width="45%" />
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/03a45991-4883-452c-beb2-02405597a572" width="45%" />
+</p>
+
+### Admin Page:
+
+<!-- Third row -->
+<p float="left">
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/73668406-3591-4cca-9668-4b48cfa8539c" width="45%" />
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/96967308-9bb2-4c5f-bb36-88cb72b8a2d3" width="45%" />
+  
+</p>
+<p float="left">
+<img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/789bedb9-a5dd-445d-a77a-efc4fc6976ab" width="45%" />
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/f0cf91e6-e8d4-4ca5-86c9-7f68166f88ca" width="45%" />
+</p>
+<!-- Fourth row -->
+<p float="left">
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/8a829902-2b39-40de-a203-ab3193868c7b" width="45%" />
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/075cccf2-8e8e-4cb6-8717-d38ad8b78fd9" width="45%" />
+  
+</p>
+
+<p float="left">
+<img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/cedee41f-13e8-4dc2-82a2-f44047ff0ec1" width="45%" />
+
+ ### User Page:
+ 
+</p>
+<p float="left">
+<img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/60b29be8-437e-4c26-a143-46f721daa351" width="45%" />
+ </p>
 
 
 ## Project Contributors:
@@ -20,50 +64,33 @@ Welcome to in_pairs, your central platform for intelligent management of your sm
 
 ##  Use case Diagram
 
-![WhatsApp Image 2023-10-14 à 22 49 01_e3b36818](https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/ca86d3db-6876-461b-a669-7597e9b4b572)
+<img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/114859285/ca86d3db-6876-461b-a669-7597e9b4b572" alt="WhatsApp Image" width="70%" >
+
 
 ## Product Backlog
 We have opted for the Agile (Scrum) methodology to manage this project as it provides better control over the final product, increases efficiency,
 and yields a higher return on investment.
 
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/ffdd8f71-287e-4b08-95f0-e3d8c33a4584)
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/8585e7a5-b194-4ef9-bc8a-8292a5a5ad92)
+<p float="left">
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/ffdd8f71-287e-4b08-95f0-e3d8c33a4584" alt="Image 1" width="52%" />
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/8585e7a5-b194-4ef9-bc8a-8292a5a5ad92" alt="Image 2" width="40.5%" />
+</p>
+
 
 To organize our work based on the SCRUM methodology, we will be using the Jira Software platform. We started by setting up the server in Jira Software.
 
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/ea19aa79-1c3b-4366-a136-b053a9c05702)
+<img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/ea19aa79-1c3b-4366-a136-b053a9c05702" alt="Image" width="30%">
 
-The obtained results are as follows:
-
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/8d531abc-1ea0-405e-8012-e7d36b2ff336)
 
 Next, we organized sprints following the Agile methodolog
 
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/ec74d6fc-763b-40ee-9922-f20915ea0eb0)
-
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/306a618d-4dcc-41a1-9368-69faad6d70b5)
-
-Sprint Backlog:
-
-   📚 sprint 1 backlog:
-
- ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/27ccc90a-cfdc-48fd-8846-7d99cdd2aa65)
-
-   📚 sprint 2 backlog:
-
- ![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/a7746260-c4b9-4de2-9dc3-4933f32f2d96)
-
-   📚 sprint 3 backlog:
-
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/5791b393-60cf-4622-a1eb-a7b22e455b5b)
+<p float="left">
+  <img src="https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/ec74d6fc-763b-40ee-9922-f20915ea0eb0" alt="Image 1" width="60%" >
   
-   📚 sprint 4 backlog:
+</p>
 
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/694b6035-4ba0-43c1-b3c8-ace92317f58d)
-   
-   📚 sprint 4 backlog:
 
-![image](https://github.com/Nouhaila-Akhziz/SmartHome/assets/132377531/9c9e8624-f600-4eed-b0dc-bf7e6f744381)
+  
 
 
 
