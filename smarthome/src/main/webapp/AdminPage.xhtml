@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns:faces="jakarta.faces" xmlns:ui="jakarta.faces.facelets" xmlns:f="jakarta.faces.core"
+  xmlns:h="jakarta.faces.html" xmlns:c="jakarta.tags.core" xmlns:fn="jakarta.tags.functions" xmlns:p="http://primefaces.org/ui">
+
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style>
+  .logo-container {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-container img {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            top:0;
+        }
+
+        /* Section styles */      
+
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+	 /* Navbar container styles */
+#navbar-container {
+    background-color: #5F9EA0 !important; /* Black background color */
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100; /* Ensure it's on top of other elements */
+}
+
+        #navbar-container #navbar ul {
+    display: flex;
+}
+	
+        /* Navbar styles */
+        #navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 10px;
+        }
+
+        #navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 0 10px;
+        }
+
+       
+
+        /* Custom styles for the sections */
+        .custom-section {
+            background-color: #B0E0E6;
+            border-radius: 30px;
+            width: 100%;
+            padding: 50px; /* Adjust padding as needed */
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin-top: 20px;
+        }
+        .card {
+            /* Ajoutez les styles de la carte ici */
+            border: 1px;
+            solid : #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+     <!-- Navbar -->
+    <div id="navbar-container">
+        <div class="logo-container">
+            <img src="https://i.pinimg.com/originals/da/e0/92/dae092a545e4c09714ee9842ab15dc10.jpg" alt="New Logo" />
+            in_pairs.site
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#Smart Devices-section">Smart Devices</a></li>
+                <li><a href="#Users-section">Users</a></li>
+                <li><a href="#Temperature-section">Temperature</a></li>
+                <li><a href="#Consummation-section">Consummation</a></li>
+                <li><a href="#History-section">History</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- ... (navbar code) ... -->
+
+    <!-- Welcome Section -->
+   <section id="Smart Devices-section" class="custom-section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;
+            width: 100%;">
+    <h1 class="header" style="font-size: 50px; font-weight: bold; margin-bottom: 20px;">Smart Home</h1>
+    <p class="sub-header">Welcome #{signupBean.utilisateur.nomUtilisateur}</p>
+    <p class="sub-header">Take full control of your home</p>
+
+    <div style="display: flex; align-items: center; margin-top: 20px;">
+        <div style="margin-right: 20px; text-align: center;">
+            <!-- Smart Light -->
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span></input>
+            </label>
+            <img src="https://cdn4.iconfinder.com/data/icons/smart-home-38/100/smart-home-02-512.png" alt="smartlight" style="height: 80px; width: 80px; margin: 10px;"></img>
+            <h1>Smart light</h1>
+        </div>
+
+        <div style="text-align: center;">
+            <!-- Smart Door -->
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span></input>
+            </label>
+            <img src="https://cdn-icons-png.flaticon.com/512/3168/3168605.png" alt="smartdoor" style="height: 80px; width: 80px; margin: 10px;"></img>
+            <h1>Smart door</h1>
+        </div>
+    </div>
+
+    <img src="https://i.pinimg.com/564x/19/95/87/199587917eb4b39d718f369b4385f115.jpg" alt="img-home" style="position: absolute; top: 120px; right: 0; height: 500px; width: 500px; border-radius: 50%;"></img>
+
+</section>
+
+
+    <!-- Other Sections -->
+    <!-- Section 2 -->
+   <!-- Section 2 -->
+<!--<section id="Users-section" class="custom-section" style="height: 100vh; width: 100%;">
+    <h1 class="header">Users</h1>
+
+   <h:form>
+        <div class="card">
+            <p:dataTable var="user" value="#{signupBean.nonAdminUsers}" emptyMessage="No non-admin users found">
+                <p:column headerText="Username">
+                    <h:outputText value="#{user.nomUtilisateur}" />
+                </p:column>
+
+                <p:column headerText="Email">
+                    <h:outputText value="#{user.adresseEmail}" />
+                </p:column>
+                <!-- Ajoutez plus de colonnes au besoin -->
+
+              <!-- </p:dataTable>-->
+          <!-- </div>
+    </h:form>
+</section>
+
+
+    <!-- Section 3 -->
+    <section id="Temperature-section" class="custom-section" style=" height: 100vh;
+            width: 100% ;">
+        <!-- Content of the third section -->
+    </section>
+
+    <!-- Section 4 -->
+    <section id="Consummation-section" class="custom-section" style=" height: 100vh;
+            width: 100% ;">
+        <!-- Content of the fourth section -->
+    </section>
+
+    <!-- Section 5 -->
+    <section id="History-section" class="custom-section" style=" height: 100vh;
+            width: 100% ;">
+        <!-- Content of the fifth section -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+        
