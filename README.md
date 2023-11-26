@@ -103,6 +103,8 @@ Next, we organized sprints following the Agile methodolog
 - **Device Harmony:** Seamlessly connect with a variety of smart home devices for a harmonious living environment.
 - **User-Friendly Interface:** Navigate through our user-friendly web interface designed for simplicity and ease of use.
 
+
+
 ## Technologies Used
 
 in_pairs is built using a variety of technologies to provide a robust and efficient smart home management solution. Here are some key technologies used in the project:
@@ -127,7 +129,17 @@ in_pairs is built using a variety of technologies to provide a robust and effici
 4. **Real-Time Monitoring:**
    - Monitor the real-time execution of rules and receive instant notifications for triggered actions.
 
+## Security Aspect:
 
+We've employed Bcrypt for hashing user passwords and encryption with a predefined key for our database, ensuring the security requirements of our website. 
+## Admin:
+The admin has access to devices like lights, climate control, and doors. All modifications are logged in our history, which the admin can review. The history includes device and user IDs, actions, and modification timestamps. The admin can also access a user table, user information, device consumption, and predefined energy consumption rules.
+
+##   User:
+Users share similar functionalities with the admin but lack access to other users' information.
+
+##  Future Plans:
+After completing our website, we'll finalize the implementation of our database using sensor data. This data will be extracted using Node-RED, a platform that collects, processes, and sends sensor data to our database.
 
 ## Contributing
 
