@@ -105,4 +105,19 @@ public class Utilisateurdaoimpl implements UtilisateurIDAO {
 
         return new Utilisateur(id, nomUtilisateur, motDePasseHash, adresseEmail, niveauAcces);
     }
+    public List<Utilisateur> findNonAdminUsers() {
+        List<Utilisateur> nonAdminUsers = new ArrayList<>();
+        String query = "SELECT * FROM Utilisateurs WHERE niveauAcces != 'admin'";
+        try (Statement statement = connection.createStatement(); ResultSet rs = statement.executeQuery(query)) {
+            while (rs.next()) {
+                Utilisateur utilisateur = mapResultSetToUtilisateur(rs);
+                nonAdminUsers.add(utilisateur);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle exception as needed
+        }
+        return nonAdminUsers;
+    }
+
 }
